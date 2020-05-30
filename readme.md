@@ -2,6 +2,7 @@
 
 [![tag](https://img.shields.io/github/tag/ako-deno/delegates.svg)](https://github.com/ako-deno/delegates/tags)
 ![delegates-ci](https://github.com/ako-deno/delegates/workflows/delegates-ci/badge.svg)
+[![HitCount](http://hits.dwyl.com/ako-deno/delegates.svg)](http://hits.dwyl.com/ako-deno/delegates)
 
 Method and accessor delegation utilty for Deno. Based on `https://github.com/tj/node-delegates`.
 
