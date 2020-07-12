@@ -69,7 +69,7 @@ export class Delegator {
 
     // https://github.com/Microsoft/TypeScript/issues/16016
     proto.__defineGetter__(name, function (this: any) {
-      return this[target][name];
+      return this[target] ? this[target][name] : undefined;
     });
 
     return this;

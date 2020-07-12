@@ -1,7 +1,7 @@
 import {
   assert,
   assertEquals,
-} from "https://deno.land/std/testing/asserts.ts";
+} from "https://deno.land/std@0.60.0/testing/asserts.ts";
 import { delegates, Delegator } from "../mod.ts";
 
 const { test } = Deno;
@@ -73,4 +73,10 @@ test(".access(name) should delegate getters and setters", function () {
 
   obj.type = "hey";
   assertEquals(obj.type, "HEY");
+});
+
+test("Deno.inspect", function () {
+  const obj: any = {};
+  delegates(obj, "request").access("type");
+  assertEquals(Deno.inspect({ type: undefined }), Deno.inspect(obj));
 });
